@@ -1,38 +1,42 @@
 .App {
   text-align: center;
+  background:url('https://images.pexels.com/photos/3783229/pexels-photo-3783229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  min-height:100vh;
+  background-position:center;
+  background-size:cover;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  width:100%;
+  font-size:4em;
+  transition:ease-in-out;
+  animation-name: colors;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes colors {
+  0% {background-color: #39f;}
+ 15% {background-color: #8bc5d1;}
+ 30% {background-color: #f8cb4a;}
+ 45% {background-color: #95b850;}
+ 60% {background-color: #944893;}
+ 75% {background-color: #c71f00;}
+ 90% {background-color: #bdb280;}
+100% {background-color: #39f;}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  width:100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.joke-container {
+  background:#fff;
+  display:block;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  position:absolute;
+  padding:2em;
 }
